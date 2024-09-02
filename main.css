@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
+
+:root {
+    --primary-color: #6555FF;
+    --primary-gradient: linear-gradient(90deg, #AE00FF 0%, #00C8FF 100%);
+    --main-bg-color: #10151E;
+    --block-bg-color: #182034;
+    --group-bg-color: #273046;
+    --text-secondary: #7D8DB2;
+}
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -8,13 +18,40 @@
     color: #fff;
 }
 
-:root {
-    --primary-color: #A006FA;
-    --primary-gradient: linear-gradient(90deg, #AE00FF 0%, #00C8FF 100%);
-    --main-bg-color: #10151E;
-    --block-bg-color: #182034;
-    --group-bg-color: #273046;
-    --text-secondary: #7D8DB2;
+body {
+    display: flex;
+    align-items: center;
+}
+
+.header {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    line-height: 24px;
+    gap: 12px;
+}
+
+.header-links {
+    display: flex;
+    gap: 16px;
+}
+
+.header-links a {
+    text-decoration: none;
+    padding: 8px 16px;
+    color: var(--text-secondary);
+    transition: 200ms;
+    border-bottom: 2px solid var(--main-bg-color);
+}
+
+.header-links a:hover {
+    border-bottom: 2px solid var(--group-bg-color);
 }
 
 .input-label {
@@ -182,5 +219,21 @@ button:focus::before {
     100% {
         translate: 0;
         opacity: 0;
+    }
+}
+
+
+
+
+@media (max-width: 480px) {
+
+    .header-links {
+        gap:8px;
+    }
+
+    .header-links a {
+        padding: 8px;
+        font-size: 12px;
+        line-height: 18px;
     }
 }
