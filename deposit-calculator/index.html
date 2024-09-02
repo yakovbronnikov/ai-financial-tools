@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Deposit calculator</title>
+    
+</head>
+
+<body>
+    <h1>Deposit calculator</h1>
+
+    <div class="general">
+
+        <div class="form-wrapper">
+            <div class="input-group">
+                <label class="input-label" for="amount">
+                    Deposit amount
+                    <input type="number" id="amount" placeholder="Enter the amount" value="50000">
+                    <span>USD</span>
+                </label>
+
+                <label class="input-label" for="percent">
+                    Interest rate
+                    <input type="number" id="percent" placeholder="Annual" value="20">
+                    <span>%</span>
+                </label>
+
+                <label class="input-label" for="term">
+                    Months
+                    <input type="number" id="term" placeholder="Deposit term" value="6">
+                </label>
+            </div>
+
+            <label for="compound" class="toggle">
+                Compound interest
+                <input type="checkbox" id="compound" onchange="compoundSwitch()" checked>
+                <div class="toggle-switcher"></div>
+            </label>
+
+            <button id="calculate" onclick="calcTotalCompound()">Calculate</button>
+        </div>
+
+        <div class="result-wrapper">
+            <div class="result">
+                <span>You will earn</span>
+                <p id="result-percent"></p>
+                <div class="percent-skeleton skeleton-result"></div>
+            </div>
+
+            <div class="result">
+                <span>Total amount</span>
+                <p id="result-amount"></p>
+                <div class="amount-skeleton skeleton-result"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="history">
+        <div class="history-item history-header">
+            <p>Month</p>
+            <p>Income</p>
+            <p>Total</p>
+        </div>
+        <div id="history"></div>
+        <div class="history-skeleton">
+            <div class="history-skeleton-item"></div>
+            <div class="history-skeleton-item"></div>
+            <div class="history-skeleton-item"></div>
+            <div class="history-skeleton-item"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
