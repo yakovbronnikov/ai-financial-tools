@@ -227,6 +227,17 @@ button:focus::before {
 
 @media (max-width: 480px) {
 
+    .header-logo svg {
+        transform-origin: center;
+        scale: 0.75;
+    }
+
+    .header-logo {
+        font-size: 12px;
+        line-height: 18px;
+        gap: 6px;
+    }
+
     .header-links {
         gap:8px;
     }
