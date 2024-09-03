@@ -95,16 +95,16 @@ button a {
         padding: 320px 0px 80px;
     }
 
-    .hero img:nth-child(3) {
-        display: block;
-        width: 360px;
-        right: auto; top: 32px;
-    }
-
     .hero img:nth-child(1),
     .hero img:nth-child(2) {
         display: none;
         opacity: 0;
+    }
+
+    .hero img:nth-child(3) {
+        display: block;
+        width: 360px;
+        right: auto; top: 32px;
     }
 
     .heading p {
