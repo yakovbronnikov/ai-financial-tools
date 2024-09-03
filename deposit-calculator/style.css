@@ -3,7 +3,7 @@ body {
     flex-direction: column;
     gap: 80px;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     background: var(--main-bg-color);
     min-height: 100vh;
     padding: 24px;
