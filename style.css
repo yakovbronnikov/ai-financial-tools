@@ -54,6 +54,10 @@ button a {
     left: 24px;
 }
 
+.hero img:nth-child(3) {
+    display: none;
+}
+
 .heading p {
     max-width: 420px;
     margin: 24px 0px 64px;
@@ -69,9 +73,7 @@ button a {
 
     .hero img {
         width: 300px;
-        position: absolute;
-        right: 24px; top: 48px;
-        z-index: -10;
+        top: 48px;
     }
     
 }
@@ -93,14 +95,14 @@ button a {
         padding: 320px 0px 80px;
     }
 
-    .hero img {
-        width: 320px;
-        position: absolute;
+    .hero img:nth-child(3) {
+        display: block;
+        width: 360px;
         right: auto; top: 32px;
-        z-index: -10;
     }
 
-    .hero img:nth-child(1) {
+    .hero img:nth-child(1),
+    .hero img:nth-child(2) {
         display: none;
     }
 
