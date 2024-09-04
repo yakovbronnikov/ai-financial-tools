@@ -44,6 +44,7 @@ body {
 }
 
 .header-links a {
+    position: relative;
     text-decoration: none;
     padding: 8px 16px;
     color: var(--text-secondary);
@@ -53,6 +54,19 @@ body {
 
 .header-links a:hover {
     border-bottom: 2px solid var(--group-bg-color);
+}
+
+.header-links a:nth-child(2):before,
+.header-links a:nth-child(3):before  {
+    content: "SOON";
+    font-size: 9px;
+    line-height: 14px;
+    padding: 0 2px;
+    color: #fff;
+    position: absolute;
+    top: -2px; right: -12px;
+    background: var(--primary-color);
+    border-radius: 2px;
 }
 
 .footer {
