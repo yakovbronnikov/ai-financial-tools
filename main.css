@@ -30,7 +30,7 @@ body {
     justify-content: space-between;
 }
 
-.header-logo {
+.logo {
     display: flex;
     align-items: center;
     line-height: 24px;
@@ -53,6 +53,49 @@ body {
 
 .header-links a:hover {
     border-bottom: 2px solid var(--group-bg-color);
+}
+
+.footer {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.footer p {
+    color: var(--text-secondary);
+    flex-grow: 1;
+}
+
+.social {
+    display: flex;
+    gap: 32px;
+    background-image: url();
+}
+
+.social a {
+    width: 32px;
+    height: 32px;
+    opacity: 0.5;
+    transition: 200ms;
+    background-size: cover;
+}
+
+.social a:nth-child(1) {
+    background-image: url(assets/instagram.webp);
+}
+
+.social a:nth-child(2) {
+    background-image: url(assets/dribbble.webp);
+}
+
+.social a:nth-child(3) {
+    background-image: url(assets/github.webp);
+}
+
+.social a:hover {
+    opacity: 1;
 }
 
 .input-label {
@@ -224,6 +267,42 @@ button:focus::before {
     }
 }
 
+@media (max-width: 768px) {
+
+    .logo svg {
+        transform-origin: center;
+        scale: 0.75;
+    }
+
+    .logo {
+        font-size: 14px;
+        line-height: 20px;
+        gap: 6px;
+    }
+
+    .header-links {
+        gap:8px;
+    }
+
+    .header-links a {
+        padding: 8px;
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .footer {
+        flex-wrap: wrap;
+        row-gap: 24px;
+        justify-content: center;
+    }
+
+    .footer p {
+        font-size: 14px;
+        line-height: 20px;
+        flex-grow: 0;
+    }
+}
+
 
 
 
@@ -234,7 +313,7 @@ button:focus::before {
         scale: 0.75;
     }
 
-    .header-logo {
+    .logo {
         font-size: 12px;
         line-height: 18px;
         gap: 6px;
@@ -248,5 +327,23 @@ button:focus::before {
         padding: 8px;
         font-size: 12px;
         line-height: 18px;
+    }
+
+    .footer {
+        flex-wrap: wrap;
+        column-gap: 16px;
+        row-gap: 24px;
+    }
+
+    .footer p {
+        font-size: 12px;
+        line-height: 18px;
+        text-align: right;
+    }
+
+    .social {
+        flex-grow: 1;
+        justify-content: center;
+        gap: 24px;
     }
 }

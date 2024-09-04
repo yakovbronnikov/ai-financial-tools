@@ -138,6 +138,7 @@ h1 {
 .history {
     width: 860px;
     position: relative;
+    min-height: 240px;
 }
 
 .history-item {
