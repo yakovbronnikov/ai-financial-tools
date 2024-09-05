@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
+html {
+    scroll-behavior: smooth;
+}
 
 :root {
     --primary-color: #6555FF;
@@ -54,19 +57,6 @@ body {
 
 .header-links a:hover {
     border-bottom: 2px solid var(--group-bg-color);
-}
-
-.header-links a:nth-child(2):before,
-.header-links a:nth-child(3):before  {
-    content: "SOON";
-    font-size: 9px;
-    line-height: 14px;
-    padding: 0 2px;
-    color: #fff;
-    position: absolute;
-    top: -2px; right: -12px;
-    background: var(--primary-color);
-    border-radius: 2px;
 }
 
 .footer {
@@ -213,22 +203,22 @@ input[type="number"]:focus {
 }
 
 
-button {
+.button {
     border: none;
     padding: 16px 24px;
     background: var(--primary-gradient);
     color: #FFF;
     font-size: 16px;
     line-height: 24px;
-    position: -webkit-sticky;
-    position: sticky;
+    position: relative;
     bottom: 0px;
     transition: 0.2s;
     position: relative;
     overflow: hidden;
+    text-decoration: none;
 }
 
-button::before {
+.button::before {
     content: "";
     position: absolute;
     width: 200%;
@@ -240,21 +230,54 @@ button::before {
     opacity: 0;
 }
 
-button:hover {
+.button:hover {
     cursor: pointer;
 }
 
-button:hover::before {
+.button:hover::before {
     opacity: 0.7;
 }
 
-button:focus {
+.button:focus {
     outline: none;
 }
 
-button:focus::before {
+.button:focus::before {
     animation: button 1000ms ease-in-out;
     opacity: 0;
+}
+
+.button-secondary {
+    background: var(--main-bg-color);
+    overflow: hidden;
+}
+
+.button-secondary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: auto;
+    z-index: -1;
+    margin: -2px;
+    border-radius: inherit;
+    background: var(--primary-gradient);
+    opacity: 1;
+}
+
+.button-secondary:hover {
+    background: var(--block-bg-color);
+}
+
+.button:hover::before {
+    opacity: 1;
+}
+
+.button-secondary:focus::before {
+    animation: nonet;
+    opacity: 1;
 }
 
 @keyframes button {
