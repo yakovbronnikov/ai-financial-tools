@@ -13,6 +13,10 @@ html {
     --text-secondary: #7D8DB2;
 }
 
+::selection {
+    background: #28324F;
+}
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -24,6 +28,21 @@ html {
 body {
     display: flex;
     align-items: center;
+}
+
+.appearance {
+    filter: blur(32px);
+    opacity: 0;
+    scale: 1.25;
+    animation: appearance 800ms ease-in-out 400ms forwards;
+}
+
+@keyframes appearance {
+    to {
+        filter: blur(0px);
+        scale: 1;
+        opacity: 1;
+    }
 }
 
 .header {
@@ -101,6 +120,8 @@ body {
 .social a:hover {
     opacity: 1;
 }
+
+
 
 .input-label {
     flex-grow: 1;
@@ -211,7 +232,6 @@ input[type="number"]:focus {
     font-size: 16px;
     line-height: 24px;
     position: relative;
-    bottom: 0px;
     transition: 0.2s;
     position: relative;
     overflow: hidden;

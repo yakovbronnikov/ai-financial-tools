@@ -8,7 +8,7 @@ let calculateButton = document.getElementById('calculate')
 let resultAmount = document.getElementById('result-amount')
 let resultPercent = document.getElementById('result-percent')
 let historyList = document.getElementById('history')
-let historySkeleton = document.querySelectorAll(".history-skeleton-item")
+let historySkeleton = document.querySelector(".history-skeleton").querySelectorAll('div')
 
 let history = new Object();
 
@@ -99,17 +99,18 @@ function numberWithSpaces(x) {
 
 
 function skeleton() {
-    historyList.classList.add("appearance")
-    resultPercent.classList.add("appearance")
-    resultAmount.classList.add("appearance")
+
+    historyList.classList.add("skeleton-appearance")
+    resultPercent.classList.add("skeleton-appearance")
+    resultAmount.classList.add("skeleton-appearance")
     document.querySelector(".amount-skeleton").classList.add("result-skeleton")
     document.querySelector(".percent-skeleton").classList.add("result-skeleton")
 
 
     setTimeout(() => {
-        historyList.classList.remove("appearance")
-        resultPercent.classList.remove("appearance")
-        resultAmount.classList.remove("appearance")
+        historyList.classList.remove("skeleton-appearance")
+        resultPercent.classList.remove("skeleton-appearance")
+        resultAmount.classList.remove("skeleton-appearance")
         document.querySelector(".amount-skeleton").classList.remove("result-skeleton")
         document.querySelector(".percent-skeleton").classList.remove("result-skeleton")
     }, "1200");
@@ -122,4 +123,5 @@ function skeleton() {
     }
 }
 
-calcTotalCompound()
+
+setTimeout(() => {calcTotalCompound()}, "250")

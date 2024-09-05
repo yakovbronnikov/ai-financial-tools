@@ -190,9 +190,9 @@ h1 {
     animation: skeleton-history 1000ms ease-in-out forwards;
 }
 
-.appearance {
+.skeleton-appearance {
     opacity: 0;
-    animation: appearance 200ms ease-in-out 1000ms forwards;
+    animation: skeleton-appearance 200ms ease-in-out 1000ms forwards;
 }
 
 @keyframes skeleton-history {
@@ -218,7 +218,7 @@ h1 {
     }
 }
 
-@keyframes appearance {
+@keyframes skeleton-appearance {
     0% {
         opacity: 0;
     }
