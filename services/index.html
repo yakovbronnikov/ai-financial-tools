@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AINOM - Payback priod calculator</title>
+    <link rel="manifest" href="manifest.json" />
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+
+</head>
+
+<body>
+    <div class="header">
+        <a href="../" class="logo">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M15 0.57735C15.6188 0.220085 16.3812 0.220085 17 0.57735L28.8564 7.42265C29.4752 7.77992 29.8564 8.44017 29.8564 9.1547V22.8453C29.8564 23.5598 29.4752 24.2201 28.8564 24.5774L17 31.4226C16.3812 31.7799 15.6188 31.7799 15 31.4226L3.14359 24.5774C2.52479 24.2201 2.14359 23.5598 2.14359 22.8453V9.1547C2.14359 8.44017 2.52479 7.77992 3.14359 7.42265L15 0.57735Z"
+                    fill="#5666FF" />
+                <path
+                    d="M15.134 30.5C15.5189 31.1667 16.4811 31.1667 16.866 30.5L28.9904 9.5C29.3753 8.83333 28.8942 8 28.1244 8H3.87564C3.10584 8 2.62472 8.83333 3.00962 9.5L15.134 30.5Z"
+                    fill="#fff"
+                    fill-opacity="0.2"/>
+            </svg>
+            <span>AINOM</span>
+        </a>
+
+        <div class="header-links">
+            <a href="../deposit-calculator/">Deposit</a>
+            <a href="../credit-calculator/">Credit</a>
+            <a href="../payback-period/">Payback</a>
+        </div>
+    </div>
+
+    <div class="services appearance">
+        <h1>Services</h1>
+        <a href="../deposit-calculator/" class="services-item">
+            <svg width="100" height="80" viewBox="0 0 100 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M90 10C81.7073 38.5 57.3171 56 10 54.5V62C10 65.7712 10 67.6569 11.1716 68.8284C12.3431 70 14.2288 70 18 70H82C85.7712 70 87.6569 70 88.8284 68.8284C90 67.6569 90 65.7712 90 62V10Z" fill="url(#paint0_linear_267_859)"/>
+                <path d="M12 53.9119C58.075 55.392 79.925 38.1233 88 10" stroke="#5666FF" stroke-width="5" stroke-linecap="round"/>
+                <defs>
+                <linearGradient id="paint0_linear_267_859" x1="37.8049" y1="33.1933" x2="50.7408" y2="69.7378" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#5666FF" stop-opacity="0"/>
+                <stop offset="1" stop-color="#5666FF" stop-opacity="0.4"/>
+                </linearGradient>
+                </defs>
+                </svg>                
+            <h3>Deposit calculator</h3>
+        </a>
+
+        <a href="../credit-calculator/" class="services-item">
+            <svg width="100" height="80" viewBox="0 0 100 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M23 64V10H11V64C11 65.8638 11 66.7957 11.3045 67.5307C11.7105 68.5108 12.4892 69.2895 13.4693 69.6955C14.2044 70 15.1362 70 17 70C18.8638 70 19.7956 70 20.5307 69.6955C21.5108 69.2895 22.2895 68.5108 22.6955 67.5307C23 66.7957 23 65.8638 23 64Z" fill="url(#paint0_linear_268_885)"/>
+                <path d="M45 64V22H33V64C33 65.8638 33 66.7957 33.3045 67.5307C33.7105 68.5108 34.4892 69.2895 35.4693 69.6955C36.2044 70 37.1362 70 39 70C40.8638 70 41.7956 70 42.5307 69.6955C43.5108 69.2895 44.2895 68.5108 44.6955 67.5307C45 66.7957 45 65.8638 45 64Z" fill="url(#paint1_linear_268_885)"/>
+                <path d="M67 64V34H55V64C55 65.8638 55 66.7957 55.3045 67.5307C55.7105 68.5108 56.4892 69.2895 57.4693 69.6955C58.2044 70 59.1362 70 61 70C62.8638 70 63.7956 70 64.5307 69.6955C65.5108 69.2895 66.2895 68.5108 66.6955 67.5307C67 66.7957 67 65.8638 67 64Z" fill="url(#paint2_linear_268_885)"/>
+                <path d="M89 64V46H77V64C77 65.8638 77 66.7957 77.3045 67.5307C77.7105 68.5108 78.4892 69.2895 79.4693 69.6955C80.2044 70 81.1362 70 83 70C84.8638 70 85.7956 70 86.5307 69.6955C87.5108 69.2895 88.2895 68.5108 88.6955 67.5307C89 66.7957 89 65.8638 89 64Z" fill="url(#paint3_linear_268_885)"/>
+                <path d="M12 11H22" stroke="#5666FF" stroke-width="5" stroke-linecap="round"/>
+                <path d="M34 22H44" stroke="#5666FF" stroke-width="5" stroke-linecap="round"/>
+                <path d="M56 34H66" stroke="#5666FF" stroke-width="5" stroke-linecap="round"/>
+                <path d="M78 46H88" stroke="#5666FF" stroke-width="5" stroke-linecap="round"/>
+                <defs>
+                <linearGradient id="paint0_linear_268_885" x1="17" y1="10.5" x2="19.0832" y2="69.927" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#5666FF" stop-opacity="0"/>
+                <stop offset="1" stop-color="#5666FF" stop-opacity="0.4"/>
+                </linearGradient>
+                <linearGradient id="paint1_linear_268_885" x1="39" y1="22.4" x2="40.3339" y2="69.9626" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#5666FF" stop-opacity="0"/>
+                <stop offset="1" stop-color="#5666FF" stop-opacity="0.4"/>
+                </linearGradient>
+                <linearGradient id="paint2_linear_268_885" x1="61" y1="34.3" x2="61.7506" y2="69.9842" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#5666FF" stop-opacity="0"/>
+                <stop offset="1" stop-color="#5666FF" stop-opacity="0.4"/>
+                </linearGradient>
+                <linearGradient id="paint3_linear_268_885" x1="83" y1="46.2" x2="83.3337" y2="69.9953" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#5666FF" stop-opacity="0"/>
+                <stop offset="1" stop-color="#5666FF" stop-opacity="0.4"/>
+                </linearGradient>
+                </defs>
+                </svg>                           
+            <h3>Credit calculator</h3>
+        </a>
+
+        <a href="../payback-period/" class="services-item">
+            <svg width="100" height="80" viewBox="0 0 100 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.8787 22.8787C15 23.7574 15 25.1716 15 28V32C15 34.8284 15 36.2426 15.8787 37.1213C16.7574 38 18.1716 38 21 38H25C27.8284 38 29.2426 38 30.1213 37.1213C31 36.2426 31 34.8284 31 32V28C31 25.1716 31 23.7574 30.1213 22.8787C29.2426 22 27.8284 22 25 22H21C18.1716 22 16.7574 22 15.8787 22.8787Z" fill="url(#paint0_linear_268_915)"/>
+                <path d="M33 28C33 25.1716 33 23.7574 33.8787 22.8787C34.7574 22 36.1716 22 39 22H43C45.8284 22 47.2426 22 48.1213 22.8787C49 23.7574 49 25.1716 49 28V32C49 34.8284 49 36.2426 48.1213 37.1213C47.2426 38 45.8284 38 43 38H39C36.1716 38 34.7574 38 33.8787 37.1213C33 36.2426 33 34.8284 33 32V28Z" fill="url(#paint1_linear_268_915)"/>
+                <path d="M51.8787 22.8787C51 23.7574 51 25.1716 51 28V32C51 34.8284 51 36.2426 51.8787 37.1213C52.7574 38 54.1716 38 57 38H61C63.8284 38 65.2426 38 66.1213 37.1213C67 36.2426 67 34.8284 67 32V28C67 25.1716 67 23.7574 66.1213 22.8787C65.2426 22 63.8284 22 61 22H57C54.1716 22 52.7574 22 51.8787 22.8787Z" fill="url(#paint2_linear_268_915)"/>
+                <path d="M69.8787 22.8787C69 23.7574 69 25.1716 69 28V32C69 34.8284 69 36.2426 69.8787 37.1213C70.7574 38 72.1716 38 75 38H79C81.8284 38 83.2426 38 84.1213 37.1213C85 36.2426 85 34.8284 85 32V28C85 25.1716 85 23.7574 84.1213 22.8787C83.2426 22 81.8284 22 79 22H75C72.1716 22 70.7574 22 69.8787 22.8787Z" fill="url(#paint3_linear_268_915)"/>
+                <path d="M69.8787 40.8787C69 41.7574 69 43.1716 69 46V50C69 52.8284 69 54.2426 69.8787 55.1213C70.7574 56 72.1716 56 75 56H79C81.8284 56 83.2426 56 84.1213 55.1213C85 54.2426 85 52.8284 85 50V46C85 43.1716 85 41.7574 84.1213 40.8787C83.2426 40 81.8284 40 79 40H75C72.1716 40 70.7574 40 69.8787 40.8787Z" fill="url(#paint4_linear_268_915)"/>
+                <path d="M69 64C69 61.1716 69 59.7574 69.8787 58.8787C70.7574 58 72.1716 58 75 58H79C81.8284 58 83.2426 58 84.1213 58.8787C85 59.7574 85 61.1716 85 64V68C85 70.8284 85 72.2426 84.1213 73.1213C83.2426 74 81.8284 74 79 74H75C72.1716 74 70.7574 74 69.8787 73.1213C69 72.2426 69 70.8284 69 68V64Z" fill="url(#paint5_linear_268_915)"/>
+                <path d="M51 46C51 43.1716 51 41.7574 51.8787 40.8787C52.7574 40 54.1716 40 57 40H61C63.8284 40 65.2426 40 66.1213 40.8787C67 41.7574 67 43.1716 67 46V50C67 52.8284 67 54.2426 66.1213 55.1213C65.2426 56 63.8284 56 61 56H57C54.1716 56 52.7574 56 51.8787 55.1213C51 54.2426 51 52.8284 51 50V46Z" fill="url(#paint6_linear_268_915)"/>
+                <path d="M51.8787 58.8787C51 59.7574 51 61.1716 51 64V68C51 70.8284 51 72.2426 51.8787 73.1213C52.7574 74 54.1716 74 57 74H61C63.8284 74 65.2426 74 66.1213 73.1213C67 72.2426 67 70.8284 67 68V64C67 61.1716 67 59.7574 66.1213 58.8787C65.2426 58 63.8284 58 61 58H57C54.1716 58 52.7574 58 51.8787 58.8787Z" fill="url(#paint7_linear_268_915)"/>
+                <path d="M33.8787 40.8787C33 41.7574 33 43.1716 33 46V50C33 52.8284 33 54.2426 33.8787 55.1213C34.7574 56 36.1716 56 39 56H43C45.8284 56 47.2426 56 48.1213 55.1213C49 54.2426 49 52.8284 49 50V46C49 43.1716 49 41.7574 48.1213 40.8787C47.2426 40 45.8284 40 43 40H39C36.1716 40 34.7574 40 33.8787 40.8787Z" fill="url(#paint8_linear_268_915)"/>
+                <path d="M33 64C33 61.1716 33 59.7574 33.8787 58.8787C34.7574 58 36.1716 58 39 58H43C45.8284 58 47.2426 58 48.1213 58.8787C49 59.7574 49 61.1716 49 64V68C49 70.8284 49 72.2426 48.1213 73.1213C47.2426 74 45.8284 74 43 74H39C36.1716 74 34.7574 74 33.8787 73.1213C33 72.2426 33 70.8284 33 68V64Z" fill="url(#paint9_linear_268_915)"/>
+                <path d="M15 46C15 43.1716 15 41.7574 15.8787 40.8787C16.7574 40 18.1716 40 21 40H25C27.8284 40 29.2426 40 30.1213 40.8787C31 41.7574 31 43.1716 31 46V50C31 52.8284 31 54.2426 30.1213 55.1213C29.2426 56 27.8284 56 25 56H21C18.1716 56 16.7574 56 15.8787 55.1213C15 54.2426 15 52.8284 15 50V46Z" fill="url(#paint10_linear_268_915)"/>
+                <path d="M15.8787 58.8787C15 59.7574 15 61.1716 15 64V68C15 70.8284 15 72.2426 15.8787 73.1213C16.7574 74 18.1716 74 21 74H25C27.8284 74 29.2426 74 30.1213 73.1213C31 72.2426 31 70.8284 31 68V64C31 61.1716 31 59.7574 30.1213 58.8787C29.2426 58 27.8284 58 25 58H21C18.1716 58 16.7574 58 15.8787 58.8787Z" fill="url(#paint11_linear_268_915)"/>
+                <rect x="11" y="8" width="78" height="12" rx="4" fill="#5666FF" fill-opacity="0.4"/>
+                <path d="M71 6L71 12" stroke="#5666FF" stroke-width="8" stroke-linecap="round"/>
+                <path d="M29 6L29 12" stroke="#5666FF" stroke-width="8" stroke-linecap="round"/>
+                <defs>
+                <linearGradient id="paint0_linear_268_915" x1="76" y1="22" x2="86.1473" y2="73.7752" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#5666FF" stop-opacity="0"/>
+                <stop offset="1" stop-color="#5666FF" stop-opacity="0.4"/>
+                </linearGradient>
+                <linearGradient id="paint1_linear_268_915" x1="76" y1="22" x2="86.1473" y2="73.7752" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#5666FF" stop-opacity="0"/>
+                <stop offset="1" stop-color="#5666FF" stop-opacity="0.4"/>
+                </linearGradient>
+                <linearGradient id="paint2_linear_268_915" x1="76" y1="22" x2="86.1473" y2="73.7752" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#5666FF" stop-opacity="0"/>
+                <stop offset="1" stop-color="#5666FF" stop-opacity="0.4"/>
+                </linearGradient>
+                <linearGradient id="paint3_linear_268_915" x1="76" y1="22" x2="86.1473" y2="73.7752" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#5666FF" stop-opacity="0"/>
+                <stop offset="1" stop-color="#5666FF" stop-opacity="0.4"/>
+                </linearGradient>
+                <linearGradient id="paint4_linear_268_915" x1="76" y1="22" x2="86.1473" y2="73.7752" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#5666FF" stop-opacity="0"/>
+                <stop offset="1" stop-color="#5666FF" stop-opacity="0.4"/>
+                </linearGradient>
+                <linearGradient id="paint5_linear_268_915" x1="76" y1="22" x2="86.1473" y2="73.7752" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#5666FF" stop-opacity="0"/>
+                <stop offset="1" stop-color="#5666FF" stop-opacity="0.4"/>
+                </linearGradient>
+                <linearGradient id="paint6_linear_268_915" x1="76" y1="22" x2="86.1473" y2="73.7752" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#5666FF" stop-opacity="0"/>
+                <stop offset="1" stop-color="#5666FF" stop-opacity="0.4"/>
+                </linearGradient>
+                <linearGradient id="paint7_linear_268_915" x1="76" y1="22" x2="86.1473" y2="73.7752" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#5666FF" stop-opacity="0"/>
+                <stop offset="1" stop-color="#5666FF" stop-opacity="0.4"/>
+                </linearGradient>
+                <linearGradient id="paint8_linear_268_915" x1="76" y1="22" x2="86.1473" y2="73.7752" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#5666FF" stop-opacity="0"/>
+                <stop offset="1" stop-color="#5666FF" stop-opacity="0.4"/>
+                </linearGradient>
+                <linearGradient id="paint9_linear_268_915" x1="76" y1="22" x2="86.1473" y2="73.7752" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#5666FF" stop-opacity="0"/>
+                <stop offset="1" stop-color="#5666FF" stop-opacity="0.4"/>
+                </linearGradient>
+                <linearGradient id="paint10_linear_268_915" x1="76" y1="22" x2="86.1473" y2="73.7752" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#5666FF" stop-opacity="0"/>
+                <stop offset="1" stop-color="#5666FF" stop-opacity="0.4"/>
+                </linearGradient>
+                <linearGradient id="paint11_linear_268_915" x1="76" y1="22" x2="86.1473" y2="73.7752" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#5666FF" stop-opacity="0"/>
+                <stop offset="1" stop-color="#5666FF" stop-opacity="0.4"/>
+                </linearGradient>
+                </defs>
+                </svg>                      
+            <h3>Payback period</h3>
+        </a>
+
+        <a href="#" class="services-item">
+            <svg width="100" height="80" viewBox="0 0 100 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M78 40C80.9032 40 82.3548 40 83.2541 41.0739C84.1534 42.1478 83.9263 43.4215 83.472 45.969C82.6519 50.5676 80.8889 54.9699 78.27 58.8894C74.534 64.4807 69.2239 68.8385 63.0112 71.4119C56.7985 73.9853 49.9623 74.6586 43.3669 73.3467C36.7716 72.0348 30.7134 68.7966 25.9584 64.0416C21.2034 59.2866 17.9652 53.2284 16.6533 46.6331C15.3414 40.0377 16.0147 33.2015 18.5881 26.9888C21.1615 20.7761 25.5193 15.466 31.1106 11.73C35.0301 9.11109 39.4324 7.34813 44.031 6.52804C46.5785 6.07373 47.8522 5.84657 48.9261 6.74588C50 7.64519 50 9.09679 50 12L50 17C50 19.4893 50 20.734 49.4608 21.5073C48.9216 22.2805 47.3223 22.8697 44.1237 24.0479C42.8733 24.5085 41.6749 25.1169 40.5553 25.865C37.7597 27.733 35.5807 30.388 34.294 33.4944C33.0074 36.6007 32.6707 40.0189 33.3267 43.3165C33.9826 46.6142 35.6017 49.6433 37.9792 52.0208C40.3567 54.3983 43.3858 56.0174 46.6835 56.6733C49.9811 57.3293 53.3993 56.9926 56.5056 55.706C59.612 54.4193 62.267 52.2403 64.135 49.4447C64.8831 48.3251 65.4915 47.1267 65.9521 45.8763C67.1303 42.6777 67.7195 41.0784 68.4927 40.5392C69.266 40 70.5107 40 73 40H78Z" fill="url(#paint0_linear_273_247)"/>
+                <mask id="path-2-outside-1_273_247" maskUnits="userSpaceOnUse" x="47" y="3" width="40" height="40" fill="black">
+                <rect fill="white" x="47" y="3" width="40" height="40"/>
+                <path d="M50 12C50 9.09682 50 7.64524 51.0739 6.74593C52.1477 5.84662 53.4215 6.07376 55.9689 6.52805C58.3781 6.95766 60.7396 7.64714 63.0112 8.5881C67.1363 10.2968 70.8844 12.8012 74.0416 15.9584C77.1988 19.1156 79.7032 22.8637 81.4119 26.9888C82.3529 29.2604 83.0423 31.6219 83.472 34.0311C83.9262 36.5785 84.1534 37.8523 83.2541 38.9261C82.3548 40 80.9032 40 78 40L73 40C70.5107 40 69.266 40 68.4927 39.4608C67.7195 38.9216 67.1304 37.3223 65.9521 34.1238C65.8743 33.9126 65.7922 33.7027 65.706 33.4944C64.8516 31.4318 63.5994 29.5578 62.0208 27.9792C60.4422 26.4006 58.5682 25.1484 56.5056 24.294C56.2973 24.2078 56.0875 24.1257 55.8762 24.0479C52.6777 22.8696 51.0784 22.2805 50.5392 21.5073C50 20.734 50 19.4893 50 17L50 12Z"/>
+                </mask>
+                <path d="M50 12C50 9.09682 50 7.64524 51.0739 6.74593C52.1477 5.84662 53.4215 6.07376 55.9689 6.52805C58.3781 6.95766 60.7396 7.64714 63.0112 8.5881C67.1363 10.2968 70.8844 12.8012 74.0416 15.9584C77.1988 19.1156 79.7032 22.8637 81.4119 26.9888C82.3529 29.2604 83.0423 31.6219 83.472 34.0311C83.9262 36.5785 84.1534 37.8523 83.2541 38.9261C82.3548 40 80.9032 40 78 40L73 40C70.5107 40 69.266 40 68.4927 39.4608C67.7195 38.9216 67.1304 37.3223 65.9521 34.1238C65.8743 33.9126 65.7922 33.7027 65.706 33.4944C64.8516 31.4318 63.5994 29.5578 62.0208 27.9792C60.4422 26.4006 58.5682 25.1484 56.5056 24.294C56.2973 24.2078 56.0875 24.1257 55.8762 24.0479C52.6777 22.8696 51.0784 22.2805 50.5392 21.5073C50 20.734 50 19.4893 50 17L50 12Z" fill="#5666FF"/>
+                <path d="M50 12C50 9.09682 50 7.64524 51.0739 6.74593C52.1477 5.84662 53.4215 6.07376 55.9689 6.52805C58.3781 6.95766 60.7396 7.64714 63.0112 8.5881C67.1363 10.2968 70.8844 12.8012 74.0416 15.9584C77.1988 19.1156 79.7032 22.8637 81.4119 26.9888C82.3529 29.2604 83.0423 31.6219 83.472 34.0311C83.9262 36.5785 84.1534 37.8523 83.2541 38.9261C82.3548 40 80.9032 40 78 40L73 40C70.5107 40 69.266 40 68.4927 39.4608C67.7195 38.9216 67.1304 37.3223 65.9521 34.1238C65.8743 33.9126 65.7922 33.7027 65.706 33.4944C64.8516 31.4318 63.5994 29.5578 62.0208 27.9792C60.4422 26.4006 58.5682 25.1484 56.5056 24.294C56.2973 24.2078 56.0875 24.1257 55.8762 24.0479C52.6777 22.8696 51.0784 22.2805 50.5392 21.5073C50 20.734 50 19.4893 50 17L50 12Z" stroke="#5666FF" stroke-width="6" stroke-linecap="round" mask="url(#path-2-outside-1_273_247)"/>
+                <defs>
+                <linearGradient id="paint0_linear_273_247" x1="22.8" y1="67.2" x2="72.6828" y2="17.3172" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#5666FF" stop-opacity="0"/>
+                <stop offset="1" stop-color="#5666FF" stop-opacity="0.4"/>
+                </linearGradient>
+                </defs>
+                </svg>  
+            <h3>Time price</h3>
+        </a>
+    </div>
+
+    <div class="footer">
+        <a href="../" class="logo">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M15 0.57735C15.6188 0.220085 16.3812 0.220085 17 0.57735L28.8564 7.42265C29.4752 7.77992 29.8564 8.44017 29.8564 9.1547V22.8453C29.8564 23.5598 29.4752 24.2201 28.8564 24.5774L17 31.4226C16.3812 31.7799 15.6188 31.7799 15 31.4226L3.14359 24.5774C2.52479 24.2201 2.14359 23.5598 2.14359 22.8453V9.1547C2.14359 8.44017 2.52479 7.77992 3.14359 7.42265L15 0.57735Z"
+                    fill="#273046" />
+                <path
+                    d="M15.134 30.5C15.5189 31.1667 16.4811 31.1667 16.866 30.5L28.9904 9.5C29.3753 8.83333 28.8942 8 28.1244 8H3.87564C3.10584 8 2.62472 8.83333 3.00962 9.5L15.134 30.5Z"
+                    fill="#323E58" />
+            </svg>
+            <span>AINOM</span>
+        </a>
+
+        <p>All rights reserved ® 2024</p>
+        <div class="social">
+            <a href="https://instagram.com/yakovbronnikov" target="_blank"></a>
+            <a href="https://dribbble.com/yakovbronnikov" target="_blank"></a>
+            <a href="https://github.com/yakovbronnikov" target="_blank"></a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

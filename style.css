@@ -29,7 +29,7 @@ h2 {
     width: 100%;
     max-width: 1080px;
     text-align: center;
-    padding: 160px 0px;
+    padding: 200px 0px;
     position: relative;
     display: flex;
     justify-content: center;
@@ -41,7 +41,7 @@ h2 {
 .hero img {
     width: 360px;
     position: absolute;
-    top: 80px;
+    top: 120px;
     z-index: -10;
     opacity: 0;
 }
@@ -127,7 +127,7 @@ h2 {
     scale: 1.75;
 }
 
-/* .section-image svg path:nth-child(2) {
+.section-image svg path:nth-child(3) {
     stroke-dasharray: 96px;
     stroke-dashoffset: 96px;
     transition: 200ms;
@@ -157,11 +157,62 @@ h2 {
     100% {
         stroke-dashoffset: -96px;
     }
-} */
+}
 
 .credit .section-image {
     order: -1;
 }
+
+.credit .section-image  svg path:nth-child(5) {
+    animation: credit-animation-01 1200ms ease-in-out infinite;
+}
+
+.credit .section-image  svg path:nth-child(6) {
+    animation: credit-animation-02 1200ms ease-in-out infinite;
+}
+
+.credit .section-image  svg path:nth-child(7) {
+    animation: credit-animation-03 1200ms ease-in-out infinite;
+}
+
+.credit .section-image  svg path:nth-child(8) {
+    animation: credit-animation-04 1200ms ease-in-out infinite;
+}
+
+@keyframes credit-animation-01 {
+    10% {translate: 0px -4px; stroke-width: 7;}
+    20% {translate: 0px 0px; stroke-width: 5;}
+}
+
+@keyframes credit-animation-02 {
+    20% {translate: 0px 0px; stroke-width: 5;}
+    30% {translate: 0px -4px; stroke-width: 7;}
+    40% {translate: 0px 0px; stroke-width: 5;}
+}
+
+@keyframes credit-animation-03 {
+    40% {translate: 0px 0px; stroke-width: 5;}
+    50% {translate: 0px -4px; stroke-width: 7;}
+    60% {translate: 0px 0px; stroke-width: 5;}
+}
+
+@keyframes credit-animation-04 {
+    60% {translate: 0px 0px; stroke-width: 5;}
+    70% {translate: 0px -4px; stroke-width: 7;}
+    80% {translate: 0px 0px; stroke-width: 5;}
+}
+
+.payback .section-image  svg  {
+    transform-origin: center;
+    animation: payback-animation 1200ms ease-in-out infinite alternate;
+}
+
+@keyframes payback-animation {
+    0% {translate: 0px 0px; rotate: -2deg;}
+    50% {translate: 0px -8px; rotate: 0deg;}
+    100% {translate: 0px 0px; rotate: 2deg;}
+}
+
 
 .credit a,
 .payback a {
