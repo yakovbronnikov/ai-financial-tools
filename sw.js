@@ -13,7 +13,9 @@ self.addEventListener('install', (event) => {
     event.waitUntil(
         caches.open(CACHE).then((cache) => {
             return cache.addAll([
-                '/img/background'
+                'assets',
+                'deposit-calculator',
+                'services'
             ]);
         })
     );
