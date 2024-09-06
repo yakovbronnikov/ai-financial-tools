@@ -21,7 +21,7 @@
     "lang": "e-EN",
     "name": "AINOM - AI-based financial tools",
     "short_name": "AINOM",
-    "start_url": "https://yakovbronnikov.github.io/ai-financial-tools/services",
-    "scope": "https://yakovbronnikov.github.io/ai-financial-tools/",
+    "start_url": "services",
+    "scope": "",
     "id": "00000001"
 }
