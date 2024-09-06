@@ -66,7 +66,7 @@ h3 {
     width: 100%;
     max-width: 1200px;
     display: flex;
-    justify-content: space-between;
+    gap: 24px;
 }
 
 .logo {
@@ -78,9 +78,21 @@ h3 {
 }
 
 .header-links {
+    flex-grow: 1;
     display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 0;
     gap: 16px;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    position: relative;
 }
+
+.header-links::-webkit-scrollbar {
+    display: none;
+}
+
 
 .header-links a {
     position: relative;
@@ -102,6 +114,10 @@ h3 {
     align-items: center;
     gap: 40px;
     margin-top: 24px;
+}
+
+.footer .logo span {
+    color: var(--text-secondary);
 }
 
 .footer p {
@@ -411,13 +427,25 @@ input[type="number"]:focus {
     }
 
     .header-links {
-        gap:8px;
+        justify-content: start;
     }
 
     .header-links a {
         padding: 8px;
         font-size: 12px;
         line-height: 18px;
+    }
+
+    .header-links::after {
+        content: '';
+        position: -webkit-sticky;
+        position: sticky;
+        height: 20px;
+        right: 0px;
+        min-width: 24px;
+        background: linear-gradient(270deg, #10151E 0%, rgba(16, 21, 30, 0) 100%);
+        z-index: 10;
+        pointer-events: none;
     }
 
     .footer {
