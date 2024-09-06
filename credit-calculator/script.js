@@ -93,4 +93,6 @@ function skeleton() {
   }
 }
 
-calc('month')
+
+
+setTimeout(() => {calc('month')}, "200")
