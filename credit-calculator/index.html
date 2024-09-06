@@ -35,7 +35,75 @@
         </div>
     </div>
 
-    <h2>Coming soon...</h2>
+    <div class="general">
+        <div class="form-wrapper">
+            <div class="input-group">
+                <label class="input-label" for="amount">
+                    Credit amount
+                    <input type="number" id="amount" placeholder="Enter the amount" value="50000">
+                    <span>USD</span>
+                </label>
+
+                <label class="input-label" for="percent">
+                    Interest rate
+                    <input type="number" id="percent" placeholder="Annual" value="15">
+                    <span>%</span>
+                </label>
+                
+                <div class="input-combined">
+
+                    <label class="input-label" for="term">
+                        Term
+                        <input type="number" id="term" value="24">
+                    </label>
+
+                    <select name="" id="term-type" onchange="termTypeSwitch()">
+                        <option value="month">Months</option>
+                        <option value="year">Years</option>
+                    </select>
+
+                </div>
+
+            </div>
+
+            <button id="calculate" onclick="calc('year')" class="button">Calculate</button>
+        </div>
+
+        <div class="result-wrapper">
+            <div class="result">
+                <span>Monthly payment</span>
+                <p id="result-monthly"></p>
+                <div class="monthly-skeleton skeleton-result"></div>
+            </div>
+
+            <div class="result">
+                <span>Overpayment</span>
+                <p id="result-percent"></p>
+                <div class="percent-skeleton skeleton-result"></div>
+            </div>
+
+            <div class="result">
+                <span>Total amount</span>
+                <p id="result-amount"></p>
+                <div class="amount-skeleton skeleton-result"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="history">
+        <div class="history-item history-header">
+            <p>Month</p>
+            <p>Payment</p>
+            <p>Remaining debt</p>
+        </div>
+        <div id="history"></div>
+        <div class="history-skeleton">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
 
     <div class="footer">
         <a href="../" class="logo">

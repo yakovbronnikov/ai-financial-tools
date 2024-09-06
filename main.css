@@ -208,6 +208,12 @@ input[type="number"]:focus {
     -moz-appearance: textfield;
 }
 
+.input-combined {
+    border-radius: 6px;
+    background: var(--block-bg-color);
+    display: flex;
+}
+
 
 .toggle {
     display: flex;
