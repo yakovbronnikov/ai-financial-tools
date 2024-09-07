@@ -298,7 +298,8 @@ h2 {
         height: 180px;
     }
 
-    .credit .section-image {
+    .credit .section-image,
+    .time .section-image{
         order: 0;
     }
 }
