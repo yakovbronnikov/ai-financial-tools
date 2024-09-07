@@ -16,7 +16,7 @@
         }
     ],
     "orientation": "portrait",
-    "display": "fullscreen",
+    "display": "standalone",
     "dir": "auto",
     "lang": "e-EN",
     "name": "AINOM - AI-based financial tools",
