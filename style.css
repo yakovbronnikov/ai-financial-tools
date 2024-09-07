@@ -159,7 +159,8 @@ h2 {
     }
 }
 
-.credit .section-image {
+.credit .section-image,
+.time .section-image {
     order: -1;
 }
 
@@ -214,13 +215,11 @@ h2 {
 }
 
 
-.credit a,
-.payback a {
+.time a {
     color: var(--group-bg-color);
 }
 
-.credit a::before,
-.payback a::before {
+.time a::before {
     background: var(--group-bg-color);
 }
 
