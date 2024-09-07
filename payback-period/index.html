@@ -35,9 +35,72 @@
         </div>
     </div>
 
-    <h2>Coming soon...</h2>
+    <div class="general appearance">
+        <div class="form-wrapper">
+            <div class="input-group">
+                <label class="input-label" for="amount">
+                    Invested
+                    <input type="number" id="amount" placeholder="Investment amount" value="1000000">
+                    <span>$</span>
+                </label>
+                
+                <div class="input-combined">
 
-    <div class="footer">
+                    <label class="input-label" for="income">
+                        Income
+                        <input type="number" id="income" value="20000">
+                        <span>$</span>
+                    </label>
+
+                    <select name="" id="term-type" onchange="termTypeSwitch()">
+                        <option value="month">Per month</option>
+                        <option value="year">Per year</option>
+                    </select>
+
+                </div>
+
+            </div>
+
+            <button id="calculate" onclick="calc('month')" class="button">Calculate</button>
+        </div>
+
+        <div class="result-wrapper">
+            <div class="result">
+                <p id="result-months"></p>
+                <span>Months</span>
+                <div class="monthly-skeleton skeleton-result"></div>
+            </div>
+
+            <div class="result">
+                <p id="result-years"></p>
+                <span>Years</span>
+                <div class="percent-skeleton skeleton-result"></div>
+            </div>
+
+            <div class="result">
+                <p id="result-percent"></p>
+                <span>Annual</span>
+                <div class="amount-skeleton skeleton-result"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="history appearance">
+        <div class="history-item history-header">
+            <p>#</p>
+            <p>Payment</p>
+            <p>Total</p>
+        </div>
+        <div id="history"></div>
+        <div class="history-skeleton">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <div class="footer appearance">
         <a href="../" class="logo">
             <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path

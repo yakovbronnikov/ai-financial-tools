@@ -242,7 +242,7 @@ h2 {
 @media (max-width: 768px) {
 
     .hero {
-        padding: 320px 0px 80px;
+        padding: 270px 0px 80px;
     }
 
     .hero img:nth-child(1),
@@ -253,8 +253,8 @@ h2 {
 
     .hero img:nth-child(3) {
         display: block;
-        width: 360px;
-        right: auto; top: 32px;
+        width: 340px;
+        right: auto; top: 24px;
     }
 
     .heading p {
