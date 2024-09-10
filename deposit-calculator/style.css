@@ -131,96 +131,6 @@ body {
     animation: skeleton-history 1000ms ease-in-out forwards;
 }
 
-.history {
-    width: 860px;
-    position: relative;
-    min-height: 240px;
-}
-
-.history-item {
-    display: flex;
-    padding: 12px;
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 500;
-    transition: 0.2s;
-    border-radius: 4px
-}
-
-.history-item:hover {
-    background: var(--block-bg-color);
-}
-
-.history-item p {
-    width: 100%;
-    flex-grow: 1;
-}
-
-.history-item p:nth-child(2) {
-    text-align: center;
-}
-
-.history-item p:nth-child(3) {
-    text-align: right;
-}
-
-.history-header p {
-    color: var(--text-secondary);
-}
-
-.history-skeleton {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    padding-top: 48px;
-}
-
-.history-skeleton-item {
-    height: 24px;
-    margin: 12px 12px 24px;
-    border-radius: 4px;
-    animation: skeleton-history 1000ms ease-in-out forwards;
-}
-
-.skeleton-appearance {
-    opacity: 0;
-    animation: skeleton-appearance 200ms ease-in-out 1000ms forwards;
-}
-
-@keyframes skeleton-history {
-    0% {
-        background: var(--block-bg-color);
-        opacity: 1;
-        display: block;
-    }
-
-    90% {
-        background: var(--group-bg-color);
-        opacity: 1;
-    }
-
-    99.9% {
-        background: var(--group-bg-color);
-        opacity: 0;
-        display: block;
-    }
-
-    100% {
-        display: none;
-    }
-}
-
-@keyframes skeleton-appearance {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
 
 
 @media (max-width: 960px) {
@@ -247,23 +157,6 @@ body {
 
     .result-wrapper {
         width: auto;
-    }
-
-    .history {
-        width: 100%;
-        max-width: 520px;
-    }
-
-    .history-item p:nth-child(1) {
-        max-width: 48px
-    }
-
-    .history-item p:nth-child(2) {
-        text-align: right;
-    }
-
-    .history-item p:nth-child(3) {
-        display: none;
     }
 }
 
@@ -304,15 +197,5 @@ body {
 
     #result-amount {
         font-size: 16px;
-    }
-
-    .history {
-        width: 100%;
-        max-width: 420px;
-    }
-
-    .history-item p {
-        font-size: 12px;
-        line-height: 18px;
     }
 }
