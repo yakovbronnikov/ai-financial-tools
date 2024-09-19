@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AINOM - Credit calculator</title>
+    <title>AINOM - Payback priod calculator</title>
     <link rel="manifest" href="manifest.json" />
     <link rel="stylesheet" href="../main.css">
     <link rel="stylesheet" href="style.css">
@@ -24,87 +24,54 @@
                     fill="#5666FF" />
                 <path
                     d="M15.134 30.5C15.5189 31.1667 16.4811 31.1667 16.866 30.5L28.9904 9.5C29.3753 8.83333 28.8942 8 28.1244 8H3.87564C3.10584 8 2.62472 8.83333 3.00962 9.5L15.134 30.5Z"
-                    fill="#fff" fill-opacity="0.2" />
+                    fill="#fff"
+                    fill-opacity="0.2"/>
             </svg>
             <span>AINOM</span>
         </a>
 
         <div class="header-links">
             <a href="../deposit-calculator/">Deposit</a>
-            <a href="#">Credit</a>
+            <a href="../credit-calculator/">Credit</a>
             <a href="../payback-period/">Payback</a>
             <a href="../time-price/">Time</a>
-            <a href="../kilogram/">Kilogram</a>
+            <a href="#">Kg Price</a>
         </div>
     </div>
 
     <div class="general appearance">
         <div class="form-wrapper">
             <div class="input-group">
-                <label class="input-label" for="amount">
-                    Credit amount
-                    <input type="number" id="amount" placeholder="Enter the amount" value="50000">
-                    <span>USD</span>
+                <label class="input-label" for="price">
+                    Price
+                    <input type="number" id="price" placeholder="Cost of a pack" value="25">
+                    <span>$</span>
                 </label>
-
-                <label class="input-label" for="percent">
-                    Interest rate
-                    <input type="number" id="percent" placeholder="Annual" value="15">
-                    <span>%</span>
-                </label>
-
+                
                 <div class="input-combined">
 
-                    <label class="input-label" for="term">
-                        Term
-                        <input type="number" id="term" value="24">
+                    <label class="input-label" for="weight">
+                        Weight
+                        <input type="number" id="weight" value="140">
                     </label>
 
-                    <select name="" id="term-type" onchange="termTypeSwitch()">
-                        <option value="month">Months</option>
-                        <option value="year">Years</option>
+                    <select name="" id="weight-type" onchange="weightTypeSwitch(event)">
+                        <option value="Grams">Grams</option>
+                        <option value="Kilograms">Kilograms</option>
                     </select>
 
                 </div>
 
             </div>
 
-            <button id="calculate" onclick="calc('year')" class="button">Calculate</button>
+            <button id="calculate" onclick="calc('Grams')" class="button">Calculate</button>
         </div>
 
         <div class="result-wrapper">
             <div class="result">
-                <span>Monthly payment</span>
-                <p id="result-monthly"></p>
-                <div class="monthly-skeleton skeleton-result"></div>
+                <p id="result-price"></p>
+                <div class="price-skeleton skeleton-result"></div>
             </div>
-
-            <div class="result">
-                <span>Overpayment</span>
-                <p id="result-percent"></p>
-                <div class="percent-skeleton skeleton-result"></div>
-            </div>
-
-            <div class="result">
-                <span>Total amount</span>
-                <p id="result-amount"></p>
-                <div class="amount-skeleton skeleton-result"></div>
-            </div>
-        </div>
-    </div>
-
-    <div class="history appearance">
-        <div class="history-item history-header">
-            <p>Month</p>
-            <p>Payment</p>
-            <p>Remaining debt</p>
-        </div>
-        <div id="history"></div>
-        <div class="history-skeleton">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
         </div>
     </div>
 

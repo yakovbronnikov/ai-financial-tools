@@ -1,0 +1,240 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--main-bg-color);
+    min-height: 100vh;
+    padding: 24px;
+}
+
+.header-links a:nth-child(5) {
+    border-bottom: 2px solid var(--primary-color);
+    color: #FFF;
+}
+
+h2 {
+    text-align: center;
+    color: var(--text-secondary);
+}
+
+.general {
+    display: flex;
+    gap: 24px;
+    width: 100%;
+    height: min-content;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-wrapper {
+    max-width: 360px;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    background: var(--block-bg-color);
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0px 24px 48px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.input-group {
+    width: 100%;
+    padding: 16px 16px 40px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    background: var(--group-bg-color);
+}
+
+.input-group .input-label:nth-child(2),
+.input-combined {
+    width: 160px;
+}
+
+.input-combined {
+    flex-grow: 1;
+}
+
+.input-combined .input-label {
+    width: 90px;
+}
+
+#price {
+    margin-left: 18px;
+}
+
+.input-label span {
+    right: auto;
+    left: 24px;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--text-secondary);
+}
+
+select {
+    background: none;
+    border: none;
+    margin-right: 12px;
+    margin-top: 20px;
+    width: 100px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+select:focus {
+    border: none;
+    outline: none;
+}
+
+.result-wrapper {
+    background: var(--block-bg-color);
+    box-shadow: 0px 24px 48px rgba(0, 0, 0, 0.2);
+    padding: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 32px;
+    border-radius: 12px;
+    border: solid 2px transparent;
+    background-clip: padding-box;
+    width: 460px;
+    align-self: stretch;
+    position: relative;
+}
+
+.result-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    margin: -2px;
+    border-radius: inherit;
+    background: var(--primary-gradient);
+}
+
+.result {
+    flex-grow: 1;
+    display: flex;
+    gap: 4px;
+    position: relative;
+    flex-direction: column;
+    text-align: center;
+}
+
+#result-price {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+    color: #FFF;
+
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+}
+
+#result-price span {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--text-secondary);
+}
+
+.price-skeleton {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 40px;
+    border-radius: 8px;
+}
+
+.result-skeleton {
+    animation: skeleton-history 1000ms ease-in-out forwards;
+}
+
+
+
+@media (max-width: 960px) {
+    body {
+        gap: 48px;
+        justify-content: start;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .general {
+        flex-direction: column;
+        max-width: 520px;
+    }
+
+    .form-wrapper {
+        max-width: none;
+    }
+
+    .input-group .input-label:nth-child(2),
+    .input-combined {
+        width: 230px;
+    }
+
+    .result-wrapper {
+        width: auto;
+    }
+}
+
+
+@media (max-width: 480px) {
+    body {
+        justify-content: start;
+        gap: 24px;
+        padding: 16px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .general {
+        max-width: 420px;
+        gap: 16px;
+    }
+
+    .form-wrapper {
+        max-width: none;
+    }
+
+    .input-group {
+        gap: 8px;
+        padding: 16px 16px 24px;
+    }
+
+    .input-group .input-label:nth-child(2),
+    .input-combined {
+        width: 175px;
+    }
+
+    #result-price {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    .price-skeleton {
+        height: 30px;
+    }
+
+    #result-price span {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .skeleton-result {
+        height: 20px;
+    }
+}

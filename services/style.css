@@ -7,6 +7,8 @@ body {
     background: var(--main-bg-color);
     min-height: 100vh;
     padding: 24px;
+    width: 100vw;
+    overflow: hidden;
 }
 
 .services {
@@ -32,7 +34,7 @@ h1 {
     justify-content: start;
     align-items: center;
     flex-direction: column;
-    padding: 24px;
+    padding: 48px 24px;
     gap: 24px;
     background: var(--block-bg-color);
     border-radius: 12px;
@@ -57,6 +59,7 @@ h3 {
 @media (max-width: 768px) {
     .services-item {
         gap: 16px;
+        padding: 24px;
     }
 
     .services-item svg {
