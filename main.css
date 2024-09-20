@@ -75,6 +75,7 @@ h3 {
     max-width: 1200px;
     display: flex;
     gap: 24px;
+    overflow: hidden;
 }
 
 .logo {
@@ -86,6 +87,7 @@ h3 {
 }
 
 .header-links {
+    width: 100%;
     flex-grow: 1;
     display: flex;
     align-items: center;
