@@ -107,19 +107,6 @@ select:focus {
     border: 2px solid var(--primary-color);
 }
 
-/* .result-wrapper::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    z-index: -1;
-    margin: -2px;
-    border-radius: inherit;
-    background: var(--primary-gradient);
-} */
-
 .result {
     display: flex;
     gap: 16px;
@@ -357,6 +344,10 @@ select:focus {
 
     .skeleton-result {
         height: 20px;
+    }
+
+    #product-list {
+        padding: 24px 0;
     }
 
     .product-info {
