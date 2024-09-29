@@ -13,6 +13,7 @@ html {
     --block-bg-color: #182034;
     --group-bg-color: #273046;
     --text-secondary: #7D8DB2;
+    --text-tertiary: #343F64;
 }
 
 ::selection {
@@ -199,7 +200,7 @@ h3 {
 }
 
 .input-label input::placeholder {
-    color: #343F64;
+    color: var(--text-tertiary);
 }
 
 .input-label span {

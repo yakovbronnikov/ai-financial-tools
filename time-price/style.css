@@ -1,12 +1,12 @@
 body {
     display: flex;
     flex-direction: column;
-    gap: 40vh;
     align-items: center;
-    justify-content: start;
+    justify-content: space-between;
     background: var(--main-bg-color);
     min-height: 100vh;
     padding: 24px;
+    gap: 80px;
 }
 
 .header-links a:nth-child(4) {
@@ -14,16 +14,237 @@ body {
     color: #FFF;
 }
 
-
 h2 {
     text-align: center;
     color: var(--text-secondary);
+}
+
+.general {
+    display: flex;
+    gap: 24px;
+    width: 100%;
+    height: min-content;
+    justify-content: center;
+    align-items: start;
+}
+
+.form-wrapper {
+    max-width: 360px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    background: var(--group-bg-color);
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0px 24px 48px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.input-group {
+    width: 100%;
+    padding: 16px 16px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background: var(--group-bg-color);
+}
+
+
+.input-label:nth-child(3) {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.input-label:nth-child(3) input {
+    text-align: center;
+}
+
+.input-label:nth-child(3) .button {
+    border-radius: 4px;
+    background: var(--text-tertiary);
+    position: absolute;
+    top: 4px; bottom: 4px;
+    left: 4px;
+}
+
+.input-label:nth-child(3) .button::before {
+    display: none;
+}
+
+.input-label:nth-child(3) .button:hover,
+.input-label:nth-child(3) .button:focus {
+    opacity: 0.75;
+}
+
+.input-label:nth-child(3) .button:nth-child(3) {
+    left: auto;
+    right: 4px;
+}
+
+
+.input-combined {
+    flex-grow: 1;
+}
+
+.input-combined .input-label {
+    width: 90px;
+}
+
+#salary {
+    margin-left: 18px;
+}
+
+.input-label span {
+    right: auto;
+    left: 24px;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--text-secondary);
+}
+
+#salary-schedule {
+    width: 100px;
+    margin: 20px 12px 0 0;
+}
+
+
+select {
+    background: none;
+    border: none;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+select:focus {
+    border: none;
+    outline: none;
+}
+
+#work-schedule {
+    height: 24px;
+}
+
+
+
+.result-wrapper {
+    background: linear-gradient(180deg, #182034 0%, rgba(24, 32, 52, 0) 100%);
+    box-shadow: 0px 24px 48px rgba(0, 0, 0, 0.2);
+    padding: 32px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 24px;
+    border-radius: 12px;
+    border: solid 2px transparent;
+    background-clip: padding-box;
+    width: 460px;
+    align-self: stretch;
+    position: relative;
+    border: 2px solid var(--primary-color);
+}
+
+.result:nth-child(1) {
+    grid-column: 1/3;
+}
+
+.result:nth-child(1) span {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.result:nth-child(1) p {
+    font-size: 32px;
+}
+
+.result {
+    display: flex;
+    gap: 4px;
+    position: relative;
+    flex-direction: column;
+    align-self: center;
+}
+
+.result span {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: var(--text-secondary);
+}
+
+.skeleton-result {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border-radius: 8px;
+}
+
+.result-skeleton {
+    animation: skeleton-history 1200ms ease-in-out forwards;
+}
+
+
+
+@media (max-width: 960px) {
+    body {
+        gap: 48px;
+        justify-content: start;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .general {
+        flex-direction: column;
+        max-width: 520px;
+    }
+
+    .form-wrapper {
+        max-width: none;
+    }
+
+    .result-wrapper {
+        width: auto;
+    } 
 }
 
 
 @media (max-width: 480px) {
     body {
         justify-content: start;
+        gap: 32px;
         padding: 16px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .general {
+        max-width: 420px;
+        gap: 16px;
+    }
+
+    .form-wrapper {
+        max-width: none;
+    }
+
+    .input-group {
+        gap: 8px;
+        padding: 16px 16px 24px;
+    }
+
+    .result-wrapper {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 32px;
+    }
+
+    .result:nth-child(1) {
+        grid-column: 1;
     }
 }
