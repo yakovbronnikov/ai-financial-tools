@@ -96,7 +96,7 @@ h2 {
     color: var(--text-secondary)
 }
 
-.hero .heading p{
+.hero .heading p {
     margin: 24px auto 64px;
 }
 
@@ -137,6 +137,7 @@ h2 {
     10% {
         stroke-dashoffset: 96px;
     }
+
     30% {
         stroke-dashoffset: 0px;
     }
@@ -163,64 +164,108 @@ h2 {
     order: -1;
 }
 
-.credit .section-image  svg path:nth-child(5) {
+.credit .section-image svg path:nth-child(5) {
     animation: credit-animation-01 1200ms ease-in-out infinite;
 }
 
-.credit .section-image  svg path:nth-child(6) {
+.credit .section-image svg path:nth-child(6) {
     animation: credit-animation-02 1200ms ease-in-out infinite;
 }
 
-.credit .section-image  svg path:nth-child(7) {
+.credit .section-image svg path:nth-child(7) {
     animation: credit-animation-03 1200ms ease-in-out infinite;
 }
 
-.credit .section-image  svg path:nth-child(8) {
+.credit .section-image svg path:nth-child(8) {
     animation: credit-animation-04 1200ms ease-in-out infinite;
 }
 
 @keyframes credit-animation-01 {
-    10% {translate: 0px -4px; stroke-width: 7;}
-    20% {translate: 0px 0px; stroke-width: 5;}
+    10% {
+        translate: 0px -4px;
+        stroke-width: 7;
+    }
+
+    20% {
+        translate: 0px 0px;
+        stroke-width: 5;
+    }
 }
 
 @keyframes credit-animation-02 {
-    20% {translate: 0px 0px; stroke-width: 5;}
-    30% {translate: 0px -4px; stroke-width: 7;}
-    40% {translate: 0px 0px; stroke-width: 5;}
+    20% {
+        translate: 0px 0px;
+        stroke-width: 5;
+    }
+
+    30% {
+        translate: 0px -4px;
+        stroke-width: 7;
+    }
+
+    40% {
+        translate: 0px 0px;
+        stroke-width: 5;
+    }
 }
 
 @keyframes credit-animation-03 {
-    40% {translate: 0px 0px; stroke-width: 5;}
-    50% {translate: 0px -4px; stroke-width: 7;}
-    60% {translate: 0px 0px; stroke-width: 5;}
+    40% {
+        translate: 0px 0px;
+        stroke-width: 5;
+    }
+
+    50% {
+        translate: 0px -4px;
+        stroke-width: 7;
+    }
+
+    60% {
+        translate: 0px 0px;
+        stroke-width: 5;
+    }
 }
 
 @keyframes credit-animation-04 {
-    60% {translate: 0px 0px; stroke-width: 5;}
-    70% {translate: 0px -4px; stroke-width: 7;}
-    80% {translate: 0px 0px; stroke-width: 5;}
+    60% {
+        translate: 0px 0px;
+        stroke-width: 5;
+    }
+
+    70% {
+        translate: 0px -4px;
+        stroke-width: 7;
+    }
+
+    80% {
+        translate: 0px 0px;
+        stroke-width: 5;
+    }
 }
 
-.payback .section-image  svg  {
+.payback .section-image svg {
     transform-origin: center;
     animation: payback-animation 1200ms ease-in-out infinite alternate;
 }
 
 @keyframes payback-animation {
-    0% {translate: 0px 0px; rotate: -2deg;}
-    50% {translate: 0px -8px; rotate: 0deg;}
-    100% {translate: 0px 0px; rotate: 2deg;}
+    0% {
+        translate: 0px 0px;
+        rotate: -2deg;
+    }
+
+    50% {
+        translate: 0px -8px;
+        rotate: 0deg;
+    }
+
+    100% {
+        translate: 0px 0px;
+        rotate: 2deg;
+    }
 }
 
 
-.time a {
-    color: var(--group-bg-color);
-}
-
-.time a::before {
-    background: var(--group-bg-color);
-}
 
 #install {
     padding: 40px 64px;
@@ -257,7 +302,7 @@ h2 {
         width: 300px;
         top: 48px;
     }
-    
+
 }
 
 
@@ -276,7 +321,8 @@ h2 {
     .hero img:nth-child(3) {
         display: block;
         width: 340px;
-        right: auto; top: 24px;
+        right: auto;
+        top: 24px;
     }
 
     .heading p {
@@ -298,7 +344,7 @@ h2 {
     .section-image svg {
         scale: 1.25;
     }
-    
+
 }
 
 @media (max-width: 480px) {
@@ -322,7 +368,7 @@ h2 {
     }
 
     .credit .section-image,
-    .time .section-image{
+    .time .section-image {
         order: 0;
     }
 
