@@ -29,6 +29,7 @@ h2 {
 }
 
 .form-wrapper {
+    flex-grow: 1;
     max-width: 360px;
     display: flex;
     flex-direction: column;
@@ -42,27 +43,24 @@ h2 {
 
 .input-group {
     width: 100%;
+    flex-grow: 1;
     padding: 16px 16px 40px;
     display: flex;
+    flex-direction: column;
     gap: 12px;
-    flex-wrap: wrap;
     background: var(--group-bg-color);
-}
-
-.input-group .input-label:nth-child(2),
-.input-combined {
-    width: 160px;
 }
 
 .input-combined {
     flex-grow: 1;
+    width: 100%;
 }
 
 .input-combined .input-label {
     width: 90px;
 }
 
-.input-label input {
+.input-group .input-combined:nth-child(2) .input-label input {
     margin-left: 18px;
 }
 
@@ -87,6 +85,10 @@ select {
 select:focus {
     border: none;
     outline: none;
+}
+
+.input-group .input-combined:nth-child(1) select {
+    width: 60px;
 }
 
 .result-wrapper {
@@ -210,11 +212,7 @@ select:focus {
 
     .form-wrapper {
         max-width: none;
-    }
-
-    .input-group .input-label:nth-child(2),
-    .input-combined {
-        width: 230px;
+        width: 100%;
     }
 
     .result-wrapper {
@@ -246,11 +244,6 @@ select:focus {
     .input-group {
         gap: 8px;
         padding: 16px 16px 24px;
-    }
-
-    .input-group .input-label:nth-child(2),
-    .input-combined {
-        width: 175px;
     }
 
     .result-wrapper .result:nth-child(2),

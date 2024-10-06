@@ -21,16 +21,16 @@ function historyUpdate(month, payment, amount) {
 
   let item = document.createElement("div");
   item.classList.add("history-item")
-  item.innerHTML = `<p>${month + 1}</p><p>$ ${payment}</p><p>$ ${amount}</p>`;
+  item.innerHTML = `<p>${month + 1}</p><p>${countrySymbol} ${payment}</p><p>${countrySymbol} ${amount}</p>`;
   document.getElementById('history').appendChild(item)
 }
 
 
-function calc(termType) {
+function calc() {
   let months = Number(term.value) * 12
   let years = Number(term.value) / 12
 
-  if (termType == 'month') {
+  if (term.value == 'month') {
     months = Number(term.value)
   } else {
     years = Number(term.value)
@@ -40,9 +40,9 @@ function calc(termType) {
   let totalAmount = Number(amount.value) + percentAmount
   let monthlyAmount = totalAmount / months
 
-  resultMonthly.innerText = "$ " + numberWithSpaces(monthlyAmount.toFixed(2))
-  resultPercent.innerText = "$ " + numberWithSpaces(percentAmount.toFixed(2))
-  resultAmount.innerText = "$ " + numberWithSpaces(totalAmount.toFixed(2))
+  resultMonthly.innerText = `${countrySymbol} ${numberWithSpaces(monthlyAmount.toFixed(2))}`
+  resultPercent.innerText = `${countrySymbol} ${numberWithSpaces(percentAmount.toFixed(2))}`
+  resultAmount.innerText = `${countrySymbol} ${numberWithSpaces(totalAmount.toFixed(2))}`
 
   while (historyList.firstChild) {
     historyList.removeChild(historyList.firstChild);
@@ -51,14 +51,13 @@ function calc(termType) {
   for (let i = 0; i < months; i++) {
     totalAmount = totalAmount - monthlyAmount
     historyUpdate(i, monthlyAmount, totalAmount)
-    console.log("www");
   }
   skeleton()
 }
 
-function termTypeSwitch() {
-  calculateButton.setAttribute("onclick", `calc("${termType.value}")`)
-}
+// function termTypeSwitch() {
+//   calculateButton.setAttribute("onclick", `calc("${termType.value}")`)
+// }
 
 function numberWithSpaces(x) {
   var parts = x.toString().split(".");

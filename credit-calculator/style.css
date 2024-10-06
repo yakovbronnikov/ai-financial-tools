@@ -49,13 +49,14 @@ h2 {
     background: var(--group-bg-color);
 }
 
-.input-group .input-label:nth-child(2),
 .input-combined {
-    width: 160px;
+    width: 250px;
+    flex-grow: 1;
 }
 
-.input-combined {
-    flex-grow: 1;
+.input-group .input-label:nth-child(2),
+.input-group .input-combined:nth-child(3) {
+    width: 160px;
 }
 
 .input-combined .input-label {
@@ -187,9 +188,13 @@ select:focus {
         max-width: none;
     }
 
-    .input-group .input-label:nth-child(2),
     .input-combined {
-        width: 230px;
+        width: 290px;
+    }
+    
+    .input-group .input-label:nth-child(2),
+    .input-group .input-combined:nth-child(3) {
+        width: 190px;
     }
 
     .result-wrapper {
@@ -224,10 +229,15 @@ select:focus {
         padding: 16px 16px 24px;
     }
 
-    .input-group .input-label:nth-child(2),
     .input-combined {
+        width: 260px;
+    }
+    
+    .input-group .input-label:nth-child(2),
+    .input-group .input-combined:nth-child(3) {
         width: 175px;
     }
+
 
     .result {
         gap: 8px;

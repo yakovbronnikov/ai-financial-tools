@@ -42,11 +42,31 @@
     <div class="general appearance">
         <div class="form-wrapper">
             <div class="input-group">
-                <label class="input-label" for="price">
-                    Price
-                    <input type="number" id="price" placeholder="Cost of a pack" value="25">
-                    <span>$</span>
-                </label>
+
+                <div class="input-combined">
+                    <label class="input-label" for="price">
+                        Price
+                        <input type="number" id="price" placeholder="Cost of a pack" value="25">
+                    </label>
+
+                    <select name="" id="country" onchange="cnangeCountry(), calc()">
+                        <option value="AZ">AZN</option>
+                        <option value="CN">CNY</option>
+                        <option value="EU">EUR</option>
+                        <option value="UK">GBP</option>
+                        <option value="GE">GEL</option>
+                        <option value="IN">INR</option>
+                        <option value="JP">JPY</option>
+                        <option value="KR">KRW</option>
+                        <option value="KZ">KZT</option>
+                        <option value="NG">NGN</option>
+                        <option value="RU">RUB</option>
+                        <option value="TH">THB</option>
+                        <option value="TM">TMT</option>
+                        <option value="TR">TRY</option>
+                        <option value="US" selected>USD</option>
+                    </select>
+                </div>
                 
                 <div class="input-combined">
 
@@ -55,7 +75,7 @@
                         <input type="number" id="weight" value="140">
                     </label>
 
-                    <select name="" id="weight-type" onchange="weightTypeSwitch(event)">
+                    <select name="" id="weight-type" onchange="calc()">
                         <option value="Grams">Grams</option>
                         <option value="Kilograms">Kilograms</option>
                     </select>
@@ -64,7 +84,7 @@
 
             </div>
 
-            <button id="calculate" onclick="calc('Grams')" class="button">Calculate</button>
+            <button id="calculate" onclick="calc()" class="button">Calculate</button>
         </div>
 
         <div class="result-wrapper">
@@ -104,6 +124,7 @@
         </div>
     </div>
 
+    <script src="../main.js"></script>
     <script src="script.js"></script>
 </body>
 

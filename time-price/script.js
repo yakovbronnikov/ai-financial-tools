@@ -9,6 +9,7 @@ let resultDay = document.getElementById('result-day')
 let resultWeek = document.getElementById('result-week')
 let resultMonth = document.getElementById('result-month')
 let resultYear = document.getElementById('result-year')
+let salarySymbol = document.querySelector('.input-label span')
 
 let dataStorage = {
   salaryYear: 0,
@@ -102,12 +103,13 @@ function calcData() {
 }
 
 function displayData(storage) {
-  resultMinute.innerText = "$ " + numberWithSpaces(storage.salaryMinute.toFixed(2))
-  resultHour.innerText = "$ " + numberWithSpaces(storage.salaryHour.toFixed(2))
-  resultDay.innerText = "$ " + numberWithSpaces(storage.salaryDay.toFixed(2))
-  resultWeek.innerText = "$ " + numberWithSpaces(storage.salaryWeek.toFixed(2))
-  resultMonth.innerText = "$ " + numberWithSpaces(storage.salaryMonth.toFixed(2))
-  resultYear.innerText = "$ " + numberWithSpaces(storage.salaryYear.toFixed(2))
+  resultMinute.innerText = `${countrySymbol} ${numberWithSpaces(storage.salaryMinute.toFixed(2))}`
+  resultHour.innerText = `${countrySymbol} ${numberWithSpaces(storage.salaryHour.toFixed(2))}`
+  resultDay.innerText = `${countrySymbol} ${numberWithSpaces(storage.salaryDay.toFixed(2))}`
+  resultWeek.innerText = `${countrySymbol} ${numberWithSpaces(storage.salaryWeek.toFixed(2))}`
+  resultMonth.innerText = `${countrySymbol} ${numberWithSpaces(storage.salaryMonth.toFixed(2))}`
+  resultYear.innerText = `${countrySymbol} ${numberWithSpaces(storage.salaryYear.toFixed(2))}`
+  salarySymbol.innerText = countrySymbol
 }
 
 function numberWithSpaces(x) {

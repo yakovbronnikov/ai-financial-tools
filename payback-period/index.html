@@ -42,21 +42,40 @@
     <div class="general appearance">
         <div class="form-wrapper">
             <div class="input-group">
-                <label class="input-label" for="amount">
-                    Invested
-                    <input type="number" id="amount" placeholder="Investment amount" value="1000000">
-                    <span>$</span>
-                </label>
+                <div class="input-combined">
+                    <label class="input-label" for="amount">
+                        Invested
+                        <input type="number" id="amount" placeholder="Investment amount" value="1000000" onchange="calc()">
+                    </label>
+
+                    <select name="" id="country" onchange="cnangeCountry(), calc()">
+                        <option value="AZ">AZN</option>
+                        <option value="CN">CNY</option>
+                        <option value="EU">EUR</option>
+                        <option value="UK">GBP</option>
+                        <option value="GE">GEL</option>
+                        <option value="IN">INR</option>
+                        <option value="JP">JPY</option>
+                        <option value="KR">KRW</option>
+                        <option value="KZ">KZT</option>
+                        <option value="NG">NGN</option>
+                        <option value="RU">RUB</option>
+                        <option value="TH">THB</option>
+                        <option value="TM">TMT</option>
+                        <option value="TR">TRY</option>
+                        <option value="US" selected>USD</option>
+                    </select>
+                </div>
                 
                 <div class="input-combined">
 
                     <label class="input-label" for="income">
                         Income
-                        <input type="number" id="income" value="20000">
+                        <input type="number" id="income" value="20000" onchange="calc()">
                         <span>$</span>
                     </label>
 
-                    <select name="" id="term-type" onchange="termTypeSwitch()">
+                    <select name="" id="term-type" onchange="calc()">
                         <option value="month">Per month</option>
                         <option value="year">Per year</option>
                     </select>
@@ -65,7 +84,7 @@
 
             </div>
 
-            <button id="calculate" onclick="calc('month')" class="button">Calculate</button>
+            <button id="calculate" onclick="calc()" class="button">Calculate</button>
         </div>
 
         <div class="result-wrapper">
@@ -125,6 +144,7 @@
         </div>
     </div>
 
+    <script src="../main.js"></script>
     <script src="script.js"></script>
 </body>
 

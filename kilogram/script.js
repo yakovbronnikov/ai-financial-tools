@@ -13,28 +13,24 @@ let productName = document.getElementById('product-name')
 let productListStorage = []
 
 
-if(localStorage.getItem('tasks')) {
-  productListStorage = JSON.parse(localStorage.getItem('tasks'))
+if(localStorage.getItem('products')) {
+  productListStorage = JSON.parse(localStorage.getItem('products'))
   addProduct()
 }
 
-function calc(weightType) {
+function calc() {
     priceKilo = 0
 
-  if (weightType == 'Grams') {
+  if (weight.value == 'Grams') {
     priceKilo = Number(price.value) / Number(weight.value) * 1000
   } else {
     priceKilo = Number(price.value) / Number(weight.value)
   }
 
   resultPrice.innerHTML = ""
-  resultPrice.innerHTML = `$ ${priceKilo.toFixed(2)}`
+  resultPrice.innerHTML = `${countrySymbol} ${priceKilo.toFixed(2)}`
 
   skeleton()
-}
-
-function weightTypeSwitch(event) {
-  calculateButton.setAttribute("onclick", `calc("${event.target.value}")`)
 }
 
 function numberWithSpaces(x) {
@@ -76,7 +72,7 @@ addButton.addEventListener('click',function(){
   productListStorage.push(newProduct)
   addProduct()
   calc(weightType.value)
-  localStorage.setItem('tasks', JSON.stringify(productListStorage))
+  localStorage.setItem('products', JSON.stringify(productListStorage))
   productName.value = ''
 })
 
@@ -91,7 +87,7 @@ function addProduct() {
       <div class="product-info">
         <p class="product-name">${item.name}</p>
         <p>${item.weight}${weightType.value == "Grams" ? "g" : "kg"}</p>
-        <p>$ ${item.price}/kg</p>
+        <p>${countrySymbol} ${item.price}/kg</p>
       </div>
       <button class="delete-product" onclick="deleteProduct(event, ${i})"></button>
     </div>
@@ -103,7 +99,7 @@ function addProduct() {
 
 function deleteProduct(event, id) {
   productListStorage.splice(id, 1)
-  localStorage.setItem('tasks', JSON.stringify(productListStorage))
+  localStorage.setItem('products', JSON.stringify(productListStorage))
   addProduct()
 }
 

@@ -41,15 +41,36 @@
     <div class="general appearance">
         <div class="form-wrapper">
             <div class="input-group">
-                <label class="input-label" for="amount">
-                    Credit amount
-                    <input type="number" id="amount" placeholder="Enter the amount" value="50000">
-                    <span>USD</span>
-                </label>
+                
+
+                <div class="input-combined">
+                    <label class="input-label" for="amount">
+                        Credit amount
+                        <input type="number" id="amount" placeholder="Enter the amount" value="50000" onchange="calc()">
+                    </label>
+
+                    <select name="" id="country" onchange="cnangeCountry(), calc()">
+                        <option value="AZ">AZN</option>
+                        <option value="CN">CNY</option>
+                        <option value="EU">EUR</option>
+                        <option value="UK">GBP</option>
+                        <option value="GE">GEL</option>
+                        <option value="IN">INR</option>
+                        <option value="JP">JPY</option>
+                        <option value="KR">KRW</option>
+                        <option value="KZ">KZT</option>
+                        <option value="NG">NGN</option>
+                        <option value="RU">RUB</option>
+                        <option value="TH">THB</option>
+                        <option value="TM">TMT</option>
+                        <option value="TR">TRY</option>
+                        <option value="US" selected>USD</option>
+                    </select>
+                </div>
 
                 <label class="input-label" for="percent">
                     Interest rate
-                    <input type="number" id="percent" placeholder="Annual" value="15">
+                    <input type="number" id="percent" placeholder="Annual" value="15" onchange="calc()">
                     <span>%</span>
                 </label>
 
@@ -57,10 +78,10 @@
 
                     <label class="input-label" for="term">
                         Term
-                        <input type="number" id="term" value="24">
+                        <input type="number" id="term" value="24" onchange="calc()">
                     </label>
 
-                    <select name="" id="term-type" onchange="termTypeSwitch()">
+                    <select name="" id="term-type" onchange="calc()">
                         <option value="month">Months</option>
                         <option value="year">Years</option>
                     </select>
@@ -69,7 +90,7 @@
 
             </div>
 
-            <button id="calculate" onclick="calc('year')" class="button">Calculate</button>
+            <button id="calculate" onclick="calc()" class="button">Calculate</button>
         </div>
 
         <div class="result-wrapper">
@@ -127,8 +148,10 @@
             <a href="https://dribbble.com/yakovbronnikov" target="_blank"></a>
             <a href="https://github.com/yakovbronnikov" target="_blank"></a>
         </div>
+
     </div>
 
+    <script src="../main.js"></script>
     <script src="script.js"></script>
 </body>
 

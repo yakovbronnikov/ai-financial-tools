@@ -7,11 +7,10 @@ let calculateButton = document.getElementById('calculate')
 let resultMonths = document.getElementById('result-months')
 let resultYears = document.getElementById('result-years')
 let annualPercent = document.getElementById('result-percent')
+let currencyInput = document.querySelector('.input-label span')
 
 let historyList = document.getElementById('history')
 let historySkeleton = document.querySelector(".history-skeleton").querySelectorAll('div')
-
-let history = new Object();
 
 
 function historyUpdate(month, payment, amount) {
@@ -20,19 +19,19 @@ function historyUpdate(month, payment, amount) {
 
   let item = document.createElement("div");
   item.classList.add("history-item")
-  item.innerHTML = `<p>${month + 1}</p><p>$ ${payment}</p><p>$ ${amount}</p>`;
+  item.innerHTML = `<p>${month + 1}</p><p>${countrySymbol} ${payment}</p><p>${countrySymbol} ${amount}</p>`;
   document.getElementById('history').appendChild(item)
 }
 
 
-function calc(termType) {
+function calc() {
     incomeMonthly = Number(income.value)
     incomeAnnuale = Number(income.value)
 
-  if (termType == 'month') {
-    incomeAnnuale = Number(income.value) * 12
+  if (termType.value == 'month') {
+    incomeAnnuale = incomeMonthly * 12
   } else {
-    incomeMonthly = Number(income.value) / 12
+    incomeMonthly = incomeAnnuale / 12
   }
 
   let monthCount = Number(amount.value) / incomeMonthly
@@ -44,13 +43,14 @@ function calc(termType) {
   resultMonths.innerText = monthCount.toFixed(0)
   resultYears.innerText = yearCount.toFixed(1)
   annualPercent.innerText = percent.toFixed(1) + " %"
+  currencyInput.innerText = countrySymbol
 
 
   while (historyList.firstChild) {
     historyList.removeChild(historyList.firstChild);
   }
 
-  if (termType == 'month') {
+  if (termType.value == 'month') {
     historyCount = monthCount
   } else {
     historyCount = yearCount
@@ -61,10 +61,6 @@ function calc(termType) {
     historyUpdate(i, Number(income.value), totalAmount)
   }
   skeleton()
-}
-
-function termTypeSwitch() {
-  calculateButton.setAttribute("onclick", `calc("${termType.value}")`)
 }
 
 function numberWithSpaces(x) {
@@ -102,4 +98,4 @@ function skeleton() {
 
 
 
-setTimeout(() => {calc('month')}, "800")
+setTimeout(() => {calc()}, "800")

@@ -48,7 +48,7 @@
                     <label class="input-label" for="salary">
                         Salary
                         <span>$</span>
-                        <input type="number" id="salary" value="50000">
+                        <input type="number" id="salary" value="50000" onchange="calcData()">
                     </label>
 
                     <select name="" id="salary-schedule" onchange="calcData()">
@@ -69,7 +69,26 @@
                     </select>
                 </label>
 
-                
+                <label class="input-label" for="work-schedule">
+                    Currency
+                    <select name="" id="country" onchange="cnangeCountry(), calcData()">
+                        <option value="AZ">AZN</option>
+                        <option value="CN">CNY</option>
+                        <option value="EU">EUR</option>
+                        <option value="UK">GBP</option>
+                        <option value="GE">GEL</option>
+                        <option value="IN">INR</option>
+                        <option value="JP">JPY</option>
+                        <option value="KR">KRW</option>
+                        <option value="KZ">KZT</option>
+                        <option value="NG">NGN</option>
+                        <option value="RU">RUB</option>
+                        <option value="TH">THB</option>
+                        <option value="TM">TMT</option>
+                        <option value="TR">TRY</option>
+                        <option value="US" selected>USD</option>
+                    </select>
+                </label>
 
                 <label class="input-label" for="hours">
                     Working hours
@@ -145,6 +164,7 @@
         </div>
     </div>
 
+    <script src="../main.js"></script>
     <script src="script.js"></script>
 </body>
 
