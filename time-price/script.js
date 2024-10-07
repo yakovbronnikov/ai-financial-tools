@@ -138,4 +138,5 @@ function hoursChange(type) {
   type == '+' ? hours.value = Number(hours.value) + 1 : hours.value -= 1
 }
 
-calcData()
+
+setTimeout(() => {calcData()}, "800")

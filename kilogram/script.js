@@ -21,13 +21,12 @@ if(localStorage.getItem('products')) {
 function calc() {
     priceKilo = 0
 
-  if (weight.value == 'Grams') {
+  if (weightType.value == 'Grams') {
     priceKilo = Number(price.value) / Number(weight.value) * 1000
   } else {
     priceKilo = Number(price.value) / Number(weight.value)
   }
 
-  resultPrice.innerHTML = ""
   resultPrice.innerHTML = `${countrySymbol} ${priceKilo.toFixed(2)}`
 
   skeleton()
@@ -105,4 +104,4 @@ function deleteProduct(event, id) {
 
 
 
-setTimeout(() => {calc('Grams')}, "800")
+setTimeout(() => {calc()}, "800")
