@@ -30,7 +30,7 @@ function calc() {
   let months = Number(term.value) * 12
   let years = Number(term.value) / 12
 
-  if (term.value == 'month') {
+  if (termType.value == 'month') {
     months = Number(term.value)
   } else {
     years = Number(term.value)
@@ -55,9 +55,6 @@ function calc() {
   skeleton()
 }
 
-// function termTypeSwitch() {
-//   calculateButton.setAttribute("onclick", `calc("${termType.value}")`)
-// }
 
 function numberWithSpaces(x) {
   var parts = x.toString().split(".");
@@ -94,4 +91,4 @@ function skeleton() {
 
 
 
-setTimeout(() => {calc('month')}, "200")
+setTimeout(() => {calc('month')}, "800")
