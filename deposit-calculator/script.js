@@ -104,4 +104,4 @@ function skeleton() {
 }
 
 
-setTimeout(() => {calc()}, "250")
+setTimeout(() => {calc()}, "800")
