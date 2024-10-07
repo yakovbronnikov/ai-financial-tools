@@ -26,7 +26,7 @@ if (safari && ios) {
   `
 }
 
-let userAgent = navigator.userAgent.toLowerCase();
+console.log(navigator.userAgent)
 
 
 
