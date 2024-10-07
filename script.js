@@ -26,8 +26,6 @@ if (safari && ios) {
   `
 }
 
-console.log(navigator.userAgent)
-
 
 
 if ('serviceWorker' in navigator) {
